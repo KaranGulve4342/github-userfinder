@@ -12,6 +12,12 @@ type Props = {
 };
 
 export default function LayoutContainer({ children }: Props) {
+// const [isClient, setIsClient] = useState(false)
+ 
+//   useEffect(() => {
+//     setIsClient(true)
+//   }, [])
+
   return (
     <ThemeProvider attribute="class">
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>

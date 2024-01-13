@@ -8,7 +8,8 @@ import SearchAndBtn from "./components/SearchAndBtn";
 import Link from "next/link";
 import { IoLocationOutline } from "react-icons/io5";
 import { IoIosLink } from "react-icons/io";
-import { FaTwitter } from "react-icons/fa";
+// import { FaTwitter } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { BsFillBuildingsFill } from "react-icons/bs";
 import { useQuery } from "@tanstack/react-query";
 import dateFormte from "dateformat";
@@ -49,6 +50,7 @@ type GitHubUser = {
   url: string;
   documentation_url: string;
   message: string;
+  linkedin_username: string | null;
 };
 
 export default function Home() {
@@ -80,7 +82,7 @@ export default function Home() {
       {/* container */}
       <div className="  mx-auto flex w-full max-w-[600px] flex-col gap-8  rounded p-2">
         <section className="flex  justify-between gap-3 ">
-          <p className="text-xl font-semibold">devfinder</p>
+          <p className="text-xl font-semibold">GitHub-UserFinder</p>
           <DarkAndLightBtn />
         </section>
 
@@ -192,9 +194,9 @@ export default function Home() {
                   {/* item 3 */}
                   <div className="flex items-center gap-2">
                     {/* icon */}
-                    <FaTwitter className="text-xl" />
+                    <FaXTwitter className="text-xl" />
                     <p>
-                      {data?.company ?? (
+                      {data?.twitter_username ?? (
                         <span className="opacity-60">Not Available</span>
                       )}
                     </p>
