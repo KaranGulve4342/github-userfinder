@@ -52,7 +52,7 @@ type GitHubUser = {
 };
 
 export default function Home() {
-  const [userName, setUserName] = useState("octocat");
+  const [userName, setUserName] = useState("KaranGulve4342");
 
   const { isLoading, error, data, refetch } = useQuery<GitHubUser>({
     queryKey: ["repoData"],
