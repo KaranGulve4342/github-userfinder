@@ -10,7 +10,8 @@ import { IoLocationOutline } from "react-icons/io5";
 import { IoIosLink } from "react-icons/io";
 // import { FaTwitter } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { BsFillBuildingsFill } from "react-icons/bs";
+// import { BsFillBuildingsFill } from "react-icons/bs";
+import { FaUniversity } from "react-icons/fa";
 import { useQuery } from "@tanstack/react-query";
 import dateFormte from "dateformat";
 import { useState } from "react";
@@ -50,7 +51,6 @@ type GitHubUser = {
   url: string;
   documentation_url: string;
   message: string;
-  linkedin_username: string | null;
 };
 
 export default function Home() {
@@ -204,7 +204,7 @@ export default function Home() {
                   {/* item 4 */}
                   <div className="flex items-center gap-2">
                     {/* icon */}
-                    <BsFillBuildingsFill className="text-xl" />
+                    <FaUniversity className="text-xl" />
 
                     <p>
                       {data?.company ?? (
